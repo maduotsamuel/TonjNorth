@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official website of Tonj North County FT, the mighty Football Team from Tonj North County, Warrap State, South Sudan. Explore club history, squad, fixtures, results, gallery, and contact information.">
+    <meta name="keywords" content="Tonj North FT, Mighty Tonj North, Tonj North County FT, Warrap State football, South Sudan Football Team, Tonj North football team">
+    <meta name="author" content="Tonj North County FT">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#FFD700">
+    <meta property="og:title" content="Tonj North County FT | Official Website">
+    <meta property="og:description" content="The official home of Mighty Tonj North, featuring club history, squad updates, fixtures, and gallery moments.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/">
+    <meta property="og:image" content="img/hero.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tonj North County FT | Official Website">
+    <meta name="twitter:description" content="The official home of Mighty Tonj North, featuring club history, squad updates, fixtures, and gallery moments.">
+    <meta name="twitter:image" content="img/hero.jpeg">
+    <link rel="canonical" href="index.html">
+    <link rel="icon" type="image/jpeg" href="img/logo.jpeg">
+    <title>Tonj North County FT | Mighty Tonj North Official Website</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clubYellow: '#FFD700',
+                        clubDark: '#121212',
+                        clubDarker: '#0a0a0a',
+                        clubGold: '#DAA520'
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Tonj North County FT",
+            "alternateName": "Mighty Tonj North",
+            "url": "https://example.com/",
+            "logo": "img/logo.jpeg",
+            "description": "Official Football Team website for Tonj North County FT from Warrap State, South Sudan.",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Tonj North County",
+                "addressRegion": "Warrap State",
+                "addressCountry": "South Sudan"
+            },
+            "sameAs": [
+                "https://facebook.com",
+                "https://twitter.com",
+                "https://instagram.com"
+            ]
+        }
+    </script>
+    <style>
+        :root {
+            --bg-body: #121212;
+            --bg-surface: #0a0a0a;
+            --bg-card: #1a1a1a;
+            --bg-muted: #1f2937;
+            --text-primary: #f5f5f5;
+            --text-secondary: #d1d5db;
+            --text-muted: #9ca3af;
+            --border-color: #2a2a2a;
+            --accent: #FFD700;
+            --accent-strong: #DAA520;
+            --text-on-accent: #111111;
+            --hero-overlay: linear-gradient(90deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.45) 50%, rgba(10, 10, 10, 0.75) 100%);
+        }
+
+        body{
+           width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: var(--bg-body);
+            color: var(--text-primary);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        body.theme-light {
+            --bg-body: #f5f2ea;
+            --bg-surface: #ffffff;
+            --bg-card: #f8f4eb;
+            --bg-muted: #f1f5f9;
+            --text-primary: #111827;
+            --text-secondary: #374151;
+            --text-muted: #6b7280;
+            --border-color: #e5e7eb;
+            --accent: #d4a017;
+            --accent-strong: #b8860b;
+            --hero-overlay: linear-gradient(90deg, rgba(255, 255, 255, 0.86) 0%, rgba(255, 255, 255, 0.42) 50%, rgba(255, 255, 255, 0.76) 100%);
+        }
+        section{
+            width: 100%;
+        }
+
+        body.theme-light .bg-clubDark {
+            background-color: var(--bg-surface) !important;
+            color: var(--text-primary) !important;
+        }
+        body.theme-light .bg-clubDarker {
+            background-color: var(--bg-card) !important;
+            color: var(--text-primary) !important;
+        }
+        body.theme-light .bg-gray-800 {
+            background-color: var(--bg-muted) !important;
+            color: var(--text-primary) !important;
+        }
+        body.theme-light .bg-gray-900 {
+            background-color: var(--bg-card) !important;
+        }
+        body.theme-light .bg-black {
+            background-color: var(--bg-surface) !important;
+        }
+        body.theme-light .border-gray-800,
+        body.theme-light .border-gray-700 {
+            border-color: var(--border-color) !important;
+        }
+        body.theme-light .text-white,
+        body.theme-light .text-gray-100 {
+            color: var(--text-primary) !important;
+        }
+        body.theme-light .text-gray-300 {
+            color: var(--text-secondary) !important;
+        }
+        body.theme-light .text-gray-400,
+        body.theme-light .text-gray-500 {
+            color: var(--text-muted) !important;
+        }
+        body.theme-light .text-gray-600 {
+            color: var(--text-secondary) !important;
+        }
+        body.theme-light .bg-clubYellow {
+            background-color: var(--accent) !important;
+            color: var(--text-on-accent) !important;
+        }
+        body.theme-light .text-clubYellow {
+            color: var(--accent-strong) !important;
+        }
+        body.theme-light .hero-gradient {
+            background: var(--hero-overlay);
+        }
+        @media (max-width: 768px) {
+            *, *::before, *::after {
+                box-sizing: border-box;
+            }
+
+            html, body {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+            body * {
+                max-width: 100%;
+            }
+
+            body,
+            main,
+            header,
+            section,
+            article,
+            .container,
+            .section {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .container,
+            .section,
+            main {
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+
+            .max-w-7xl,
+            .max-w-6xl,
+            .max-w-5xl,
+            .max-w-4xl,
+            .max-w-3xl,
+            .max-w-2xl,
+            .max-w-xl {
+                max-width: 100% !important;
+            }
+
+            img,
+            video,
+            svg,
+            iframe,
+            canvas,
+            object,
+            embed {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .hero-content,
+            .hero-actions,
+            .hero-copy,
+            .hero-badge,
+            .hero-actions a {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .hero-actions {
+                gap: 0.75rem;
+            }
+        }
+        /* Custom scrollbar and aesthetics */
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #121212; }
+        ::-webkit-scrollbar-thumb { background: #FFD700; border-radius: 4px; }
+        .hero-gradient {
+            background: linear-gradient(90deg, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0.45) 50%, rgba(10, 10, 10, 0.75) 100%);
+        }
+        .hero-content {
+            animation: heroFadeUp 1200ms cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .hero-content .hero-badge,
+        .hero-content h1,
+        .hero-content .hero-copy,
+        .hero-content .hero-actions {
+            animation: heroStagger 1000ms cubic-bezier(0.22, 1, 0.36, 1) both;
+        }
+        .hero-content .hero-badge { animation-delay: 80ms; }
+        .hero-content h1 { animation-delay: 180ms; }
+        .hero-content .hero-copy { animation-delay: 300ms; }
+        .hero-content .hero-actions { animation-delay: 430ms; }
+        @keyframes heroFadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        @keyframes heroStagger {
+            from {
+                opacity: 0;
+                transform: translateY(14px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .reveal-section {
+            opacity: 0;
+            transform: translateY(36px);
+            transition: opacity 1.1s ease, transform 1.1s ease;
+            will-change: opacity, transform;
+        }
+        .reveal-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .parallax-layer {
+            transform: translate3d(0, 0, 0);
+            will-change: transform;
+        }
+        .gallery-track {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .gallery-track::-webkit-scrollbar {
+            display: none;
+        }
+        .gallery-card {
+            scroll-snap-align: start;
+        }
+        .news-card-image {
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+        }
+        @media (max-width: 640px) {
+            .news-card-image {
+                aspect-ratio: 4 / 3;
+            }
+        }
+    </style>
+</head>
+<body class="bg-clubDark text-gray-100 font-sans antialiased selection:bg-clubYellow selection:text-black">
+    <a href="#content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-clubYellow focus:text-black focus:px-4 focus:py-2 focus:rounded-xl">Skip to content</a>
+
+    <main id="content">
+    <!-- Main Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-clubDark/95 backdrop-blur border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo & Brand -->
+                <div class="flex items-center space-x-3">
+                    <a href="index.html"><img src="img/logo.jpeg" alt="Tonj North FT Crest" class="w-12 h-12 rounded-full border-2 border-clubYellow object-cover"></a>
+                    <div>
+                        <a href="index.html" class="text-xl sm:text-2xl font-black tracking-wider text-white">
+                            TONJ NORTH <span class="text-clubYellow">FT</span>
+                        </a>
+                        <p class="text-[10px] text-gray-400 tracking-widest uppercase">Mighty Tonj North</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav Links -->
+                <nav aria-label="Primary" class="hidden lg:flex items-center space-x-8 font-semibold text-sm">
+                    <a href="index.html" class="hover:text-clubYellow transition">Home</a>
+                    <a href="#about" class="hover:text-clubYellow transition">The Club</a>
+                    <a href="#news" class="hover:text-clubYellow transition">News</a>
+                    <a href="#squad" class="hover:text-clubYellow transition">Squad</a>
+                    <a href="#matches" class="hover:text-clubYellow transition">Fixtures & Results</a>
+                    <a href="#gallery" class="hover:text-clubYellow transition">Gallery</a>
+                    <a href="#contact" class="hover:text-clubYellow transition">Contact</a>
+                </nav>
+
+                <!-- CTA Buttons -->
+                <div class="flex items-center gap-2 sm:gap-3">
+                    <button id="theme-toggle" type="button" class="flex items-center gap-2 rounded-full border border-gray-700 bg-clubDarker px-3 py-2 text-sm font-semibold text-gray-300 transition hover:border-clubYellow hover:text-clubYellow" aria-label="Switch to light mode" aria-pressed="false">
+                        <i id="theme-toggle-icon" class="fas fa-sun"></i>
+                        <span id="theme-toggle-label" class="hidden sm:inline">Light</span>
+                    </button>
+                    <a href="#matches" class="hidden sm:flex bg-clubYellow text-black font-extrabold px-5 py-2.5 rounded-full hover:bg-yellow-400 transition shadow-lg shadow-yellow-500/10 text-sm">
+                        Match Center
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu" class="text-gray-300 hover:text-clubYellow focus:outline-none text-2xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-clubDarker border-b border-gray-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-gray-300 hover:text-clubYellow border-b border-gray-800">Home</a>
+            <a href="#about" class="block py-2 text-gray-300 hover:text-clubYellow border-b border-gray-800">The Club</a>
+            <a href="#news" class="block py-2 text-gray-300 hover:text-clubYellow border-b border-gray-800">News</a>
+            <a href="#squad" class="block py-2 text-gray-300 hover:text-clubYellow border-b border-gray-800">Squad</a>
+            <a href="#matches" class="block py-2 text-gray-300 hover:text-clubYellow border-b border-gray-800">Fixtures & Results</a>
+            <a href="#gallery" class="block py-2 text-gray-300 hover:text-clubYellow border-b border-gray-800">Gallery</a>
+            <a href="#contact" class="block py-2 text-gray-300 hover:text-clubYellow">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-[85vh] flex items-center justify-center bg-cover bg-center pt-20" style="background-image: url('img/hero.jpeg');" aria-labelledby="hero-title">
+        <div class="absolute inset-0 hero-gradient"></div>
+        <div class="hero-content relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center z-10">
+            <h1 id="hero-title" class="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight text-white mb-6">
+                The Mighty<span class="text-clubYellow"> Tonj North</span>
+            </h1>
+            <p class="hero-copy max-w-2xl mx-auto text-gray-300 text-base sm:text-lg mb-10 leading-relaxed">
+                The official home of Mighty Tonj North FT, a proud football county team from Warrap State, South Sudan, committed to excellence, unity, and community pride.
+            </p>
+            <div class="hero-actions flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#matches" class="w-full sm:w-auto bg-clubYellow text-black font-extrabold px-8 py-4 rounded-xl hover:bg-yellow-400 transition shadow-xl text-center">
+                    <i class="fas fa-calendar-alt mr-2"></i>View Fixtures
+                </a>
+                <a href="#about" class="w-full sm:w-auto bg-gray-800 text-white font-bold px-8 py-4 rounded-xl hover:bg-gray-700 transition border border-gray-700 text-center">
+                    <i class="fas fa-info-circle mr-2"></i>Club History
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="reveal-section py-20 bg-clubDark border-y border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-10">
+                <div class="max-w-2xl">
+                    <span class="text-clubYellow font-bold uppercase tracking-widest text-xs bg-clubYellow/10 px-3 py-1 rounded-full border border-clubYellow/20">Latest News</span>
+                    <h2 class="text-3xl sm:text-4xl font-black uppercase text-white mt-4 mb-3">Club Updates & Stories</h2>
+                    <p class="text-gray-400 text-sm sm:text-base">Fresh matchday news, community highlights, and behind-the-scenes moments from Mighty Tonj North.</p>
+                </div>
+                <a href="#contact" class="inline-flex items-center justify-center rounded-full border border-clubYellow/30 bg-clubYellow/10 px-5 py-2.5 text-sm font-semibold text-clubYellow hover:bg-clubYellow hover:text-black transition">
+                    Stay connected <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <div id="news-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+            <p id="news-status" class="mt-6 text-sm text-gray-400">Loading latest stories...</p>
+        </div>
+    </section>
+
+    <!-- Next Match Banner -->
+    <section class="reveal-section bg-clubYellow text-black py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center justify-between bg-black text-white p-6 sm:p-8 rounded-2xl shadow-2xl border border-clubYellow/30">
+                <div class="mb-4 lg:mb-0 text-center lg:text-left">
+                    <span class="text-clubYellow font-bold uppercase tracking-widest text-xs bg-clubYellow/10 px-3 py-1 rounded-full border border-clubYellow/20">Next Match</span>
+                    <h3 class="text-xl sm:text-2xl font-black mt-2">Warrap State Peace Tournament</h3>
+                    <p class="text-gray-400 text-sm mt-1"><i class="far fa-clock text-clubYellow mr-2"></i>Wednesday, August 5, 2026 — 15:00 PM CAT</p>
+                </div>
+                <div class="flex items-center space-x-6 my-4 lg:my-0">
+                    <div class="text-center">
+                        <img src="img/logo.jpeg" alt="Tonj North FT crest" class="w-16 h-16 mx-auto rounded-full border-2 border-clubYellow p-1 object-cover">
+                        <span class="font-extrabold mt-2 block text-sm sm:text-base">Tonj North Football Team</span>
+                    </div>
+                    <div class="text-3xl sm:text-4xl font-black text-clubYellow">VS</div>
+                    <div class="text-center">
+                        <img src="img/Gogrial.jpeg" alt="Gogrial East football team crest" class="w-16 h-16 mx-auto rounded-full border-2 border-gray-600 p-1 object-cover">
+                        <span class="font-extrabold mt-2 block text-sm sm:text-base">Gogrial East Football Team</span>
+                    </div>
+                </div>
+                <div>
+                    <a href="#matches" class="bg-clubYellow text-black font-extrabold px-6 py-3 rounded-xl hover:bg-yellow-400 transition block text-center shadow-md">
+                        Match Center <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="reveal-section py-20 bg-clubDarker">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-clubYellow font-bold uppercase tracking-widest text-xs bg-clubYellow/10 px-3 py-1 rounded-full border border-clubYellow/20">About The Club</span>
+                    <h2 class="text-3xl sm:text-4xl font-black uppercase text-white mt-4 mb-6">
+                        The Legacy of <span class="text-clubYellow">Mighty Tonj North</span>
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Tonj North County Football  Team, affectionately known as Mighty Tonj North, is more than just a Football Team,it is a symbol of community pride, strength, and resilience from Warrap State, South Sudan.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        Featuring our iconic black and yellow colors and inspired by our motto <span class="text-clubYellow font-semibold">"In Unity we Trust"</span>, our club brings together elite local talents from Tonj North County to compete at the highest levels of regional and national football tournaments hence empowering our youth and uniting our community through the beautiful game.
+                    </p>
+                    <div class="grid grid-cols-3 gap-4 border-t border-gray-800 pt-6">
+                        <div>
+                            <h4 class="text-3xl font-black text-clubYellow">20+</h4>
+                            <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Squad Players</p>
+                        </div>
+                        <div>
+                            <h4 class="text-3xl font-black text-clubYellow">100%</h4>
+                            <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Passion & Grit</p>
+                        </div>
+                        <div>
+                            <h4 class="text-3xl font-black text-clubYellow">1st</h4>
+                            <p class="text-xs text-gray-400 mt-1 uppercase tracking-wider">Mighty Tonj North (MTN)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="img/hero.jpeg" alt="Tonj North Squad" class="rounded-2xl object-cover object-center h-72 w-full border border-gray-800 shadow-xl">
+                    <img src="img/WhatsApp Image 2026-08-03 at 3.24.24 PM.jpeg" alt="Tonj North Crest" class="rounded-2xl object-contain bg-black/40 p-4 h-72 w-full border border-gray-800 shadow-xl mt-8">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Squad Section -->
+    <section id="squad" class="reveal-section py-20 bg-clubDark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-clubYellow font-bold uppercase tracking-widest text-xs bg-clubYellow/10 px-3 py-1 rounded-full border border-clubYellow/20">First Team</span>
+                <h2 class="text-3xl sm:text-4xl font-black uppercase text-white mt-4 mb-4">Meet The Squad</h2>
+                <p class="text-gray-400 text-sm sm:text-base">The warriors representing Tonj North County on the pitch with skill, discipline, and absolute dedication.</p>
+            </div>
+
+            <!-- Squad Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-12">
+                <button onclick="filterSquad('all', this)" class="squad-tab px-4 py-2 rounded-xl text-sm font-bold bg-clubYellow text-black transition shadow">All Players</button>
+                <button onclick="filterSquad('forward', this)" class="squad-tab px-4 py-2 rounded-xl text-sm font-bold bg-gray-800 text-gray-300 hover:bg-gray-700 transition">Forwards</button>
+                <button onclick="filterSquad('midfielder', this)" class="squad-tab px-4 py-2 rounded-xl text-sm font-bold bg-gray-800 text-gray-300 hover:bg-gray-700 transition">Midfielders</button>
+                <button onclick="filterSquad('defender', this)" class="squad-tab px-4 py-2 rounded-xl text-sm font-bold bg-gray-800 text-gray-300 hover:bg-gray-700 transition">Defenders</button>
+            </div>
+
+            <!-- Squad Grid -->
+            <div id="squad-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Player 1 -->
+                <div class="player-card bg-clubDarker rounded-2xl overflow-hidden border border-gray-800 shadow-lg group hover:border-clubYellow transition" data-position="forward">
+                    <div class="relative h-64 bg-gray-900 overflow-hidden">
+                        <img src="img/malek.jpeg" alt="Player" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-clubYellow text-black font-black w-10 h-10 rounded-full flex items-center justify-center text-lg shadow">
+                            9
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-clubYellow text-xs font-bold uppercase tracking-wider">Forward</span>
+                        <h3 class="text-xl font-extrabold text-white mt-1">Malek Majok Muorter</h3>
+                        <p class="text-gray-400 text-xs mt-2">Dynamic and versatile striker renowned for clinical finishing and incredible dribbling on the field.</p>
+                    </div>
+                </div>
+
+                <!-- Player 2 -->
+                <div class="player-card bg-clubDarker rounded-2xl overflow-hidden border border-gray-800 shadow-lg group hover:border-clubYellow transition" data-position="midfielder">
+                    <div class="relative h-64 bg-gray-900 overflow-hidden">
+                        <img src="img/mayar.jpeg" alt="Player" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-clubYellow text-black font-black w-10 h-10 rounded-full flex items-center justify-center text-lg shadow">
+                            2
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-clubYellow text-xs font-bold uppercase tracking-wider">Midfielder / Captain</span>
+                        <h3 class="text-xl font-extrabold text-white mt-1">Mayar Nhial Mayar</h3>
+                        <p class="text-gray-400 text-xs mt-2">An instrumental playmaker, dictating the flow of the game and providing key assists.</p>
+                    </div>
+                </div>
+
+                <!-- Player 2 -->
+                <div class="player-card bg-clubDarker rounded-2xl overflow-hidden border border-gray-800 shadow-lg group hover:border-clubYellow transition" data-position="midfielder">
+                    <div class="relative h-64 bg-gray-900 overflow-hidden">
+                        <img src="img/WhatsApp Image 2026-08-03 at 3.24.25 PM.jpeg" alt="Player" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-clubYellow text-black font-black w-10 h-10 rounded-full flex items-center justify-center text-lg shadow">
+                            10
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-clubYellow text-xs font-bold uppercase tracking-wider">Midfielder</span>
+                        <h3 class="text-xl font-extrabold text-white mt-1">Agiu Mabior Agiu</h3>
+                        <p class="text-gray-400 text-xs mt-2">The engine of the team, controlling tempo and creating vital scoring opportunities.</p>
+                    </div>
+                </div>
+
+                 <div class="player-card bg-clubDarker rounded-2xl overflow-hidden border border-gray-800 shadow-lg group hover:border-clubYellow transition" data-position="midfielder">
+                    <div class="relative h-64 bg-gray-900 overflow-hidden">
+                        <img src="img/akot.jpeg" alt="Player" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-clubYellow text-black font-black w-10 h-10 rounded-full flex items-center justify-center text-lg shadow">
+                            16
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-clubYellow text-xs font-bold uppercase tracking-wider">Midfielder</span>
+                        <h3 class="text-xl font-extrabold text-white mt-1">Akot Yel Noon</h3>
+                        <p class="text-gray-400 text-xs mt-2">The defensive midfielder, also controlling tempo and creating vital scoring opportunities.</p>
+                    </div>
+                </div>
+
+                <!-- Player 3 -->
+                <div class="player-card bg-clubDarker rounded-2xl overflow-hidden border border-gray-800 shadow-lg group hover:border-clubYellow transition" data-position="defender">
+                    <div class="relative h-64 bg-gray-900 overflow-hidden">
+                        <img src="https://placehold.co/400x500/222222/FFD700?text=Player+3" alt="Player" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-clubYellow text-black font-black w-10 h-10 rounded-full flex items-center justify-center text-lg shadow">
+                            3
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-clubYellow text-xs font-bold uppercase tracking-wider">Defender</span>
+                        <h3 class="text-xl font-extrabold text-white mt-1">Kuol Kuol</h3>
+                        <p class="text-gray-400 text-xs mt-2">Solid defensive wall with exceptional aerial ability and crucial tactical tackling.</p>
+                    </div>
+                </div>
+
+                <!-- Player 4 -->
+                <div class="player-card bg-clubDarker rounded-2xl overflow-hidden border border-gray-800 shadow-lg group hover:border-clubYellow transition" data-position="forward">
+                    <div class="relative h-64 bg-gray-900 overflow-hidden">
+                        <img src="img/mangar.jpeg" alt="Player" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 right-4 bg-clubYellow text-black font-black w-10 h-10 rounded-full flex items-center justify-center text-lg shadow">
+                            77
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-clubYellow text-xs font-bold uppercase tracking-wider">Winger</span>
+                        <h3 class="text-xl font-extrabold text-white mt-1">Mangar Chan Anei</h3>
+                        <p class="text-gray-400 text-xs mt-2">Lightning-fast winger capable of breaking past defenses with effortless skill.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fixtures & Standings Section -->
+    <section id="matches" class="reveal-section py-20 bg-clubDarker">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-clubYellow font-bold uppercase tracking-widest text-xs bg-clubYellow/10 px-3 py-1 rounded-full border border-clubYellow/20">Match Center</span>
+                <h2 class="text-3xl sm:text-4xl font-black uppercase text-white mt-4 mb-4">Fixtures & Results</h2>
+                <p class="text-gray-400 text-sm sm:text-base">Follow all match schedules and recent results for Mighty Tonj North FT.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2 space-y-4">
+                    <h3 class="text-xl font-black text-white mb-6 flex items-center">
+                        <i class="fas fa-calendar-alt text-clubYellow mr-3"></i> Upcoming Fixtures & Results
+                    </h3>
+                    <div id="matches-list" class="space-y-4"></div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-black text-white mb-6 flex items-center">
+                        <i class="fas fa-trophy text-clubYellow mr-3"></i> Group Standings
+                    </h3>
+                    <div id="standings-table"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="reveal-section py-20 bg-clubDark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-clubYellow font-bold uppercase tracking-widest text-xs bg-clubYellow/10 px-3 py-1 rounded-full border border-clubYellow/20">Photo Gallery</span>
+                <h2 class="text-3xl sm:text-4xl font-black uppercase text-white mt-4 mb-4">Moments on the Pitch</h2>
+                <p class="text-gray-400 text-sm sm:text-base">Capturing the action, energy, and joy of Mighty Tonj North.</p>
+            </div>
+
+            <div class="relative">
+                <button id="gallery-prev" type="button" class="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 h-12 w-12 items-center justify-center rounded-full bg-clubYellow text-black shadow-lg hover:bg-yellow-400 transition">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="gallery-next" type="button" class="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 h-12 w-12 items-center justify-center rounded-full bg-clubYellow text-black shadow-lg hover:bg-yellow-400 transition">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <div id="gallery-track" class="gallery-track overflow-x-hidden pb-6 scroll-smooth">
+                    <div class="flex flex-wrap gap-4 sm:gap-6"></div>
+                </div>
+            </div>
+
+            <div id="gallery-dots" class="mt-6 flex justify-center gap-2"></div>
+        </div>
+    </section>
+
+    <!-- Fan Zone & Contact Section -->
+    <section id="contact" class="reveal-section py-20 bg-clubDarker border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <span class="text-clubYellow font-bold uppercase tracking-widest text-xs bg-clubYellow/10 px-3 py-1 rounded-full border border-clubYellow/20">Fan Zone</span>
+                    <h2 class="text-3xl sm:text-4xl font-black uppercase text-white mt-4 mb-6">Join the Mighty Tonj North Family</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        Are you a passionate supporter of Tonj North County FT? Get in touch with club management, send words of encouragement to our players, or inquire about official club merchandise and membership.
+                    </p>
+                    <div class="space-y-4 text-gray-300">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-clubDark border border-gray-800 flex items-center justify-center text-clubYellow font-bold">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Location</h4>
+                                <p class="text-sm text-gray-400">Tonj North County, Warrap State, South Sudan</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-clubDark border border-gray-800 flex items-center justify-center text-clubYellow font-bold">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Email Us</h4>
+                                <p class="text-sm text-gray-400">info@tonjnorthFT.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-clubDark border border-gray-800 flex items-center justify-center text-clubYellow font-bold">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Club Office</h4>
+                                <p class="text-sm text-gray-400">+211 920 000 000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-clubDark p-8 rounded-2xl border border-gray-800 shadow-xl">
+                    <h3 class="text-2xl font-black text-white mb-6">Send a Message</h3>
+                    <form id="contact-form" class="space-y-4" novalidate>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-400 uppercase mb-2" for="contact-name">Your Name</label>
+                            <input id="contact-name" name="name" type="text" required class="w-full bg-clubDarker border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-clubYellow transition" placeholder="Enter your full name">
+                            <p id="name-error" class="mt-2 text-xs text-red-400 hidden">Please enter your name.</p>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-400 uppercase mb-2" for="contact-email">Email or Phone</label>
+                            <input id="contact-email" name="email" type="text" required class="w-full bg-clubDarker border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-clubYellow transition" placeholder="Enter your email or phone number">
+                            <p id="email-error" class="mt-2 text-xs text-red-400 hidden">Please enter a valid email or phone number.</p>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-400 uppercase mb-2" for="contact-message">Message</label>
+                            <textarea id="contact-message" name="message" rows="4" required class="w-full bg-clubDarker border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-clubYellow transition" placeholder="Write your message or cheer for the team..."></textarea>
+                            <p id="message-error" class="mt-2 text-xs text-red-400 hidden">Please enter a message.</p>
+                        </div>
+                        <button id="submit-btn" type="submit" class="w-full bg-clubYellow text-black font-extrabold py-3.5 rounded-xl hover:bg-yellow-400 transition shadow-lg disabled:opacity-60 disabled:cursor-not-allowed">
+                            Send Message
+                        </button>
+                    </form>
+                    <div id="form-success" class="hidden mt-4 p-4 bg-green-500/10 border border-green-500/30 text-green-400 rounded-xl text-center text-sm font-bold"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <div id="news-modal" class="fixed inset-0 z-[60] hidden items-center justify-center bg-black/85 px-4 py-6">
+        <div class="w-full max-w-3xl max-h-[85vh] overflow-y-auto rounded-3xl border border-gray-800 bg-clubDarker shadow-2xl">
+            <div class="flex items-center justify-between border-b border-gray-800 px-6 py-4 sm:px-8">
+                <div>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.3em] text-clubYellow">News Detail</p>
+                    <h3 class="text-xl font-black text-white">Story preview</h3>
+                </div>
+                <button id="news-modal-close" type="button" class="rounded-full border border-gray-700 bg-clubDark p-2 text-gray-300 transition hover:border-clubYellow hover:text-clubYellow" aria-label="Close news details">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="news-modal-content" class="p-6 sm:p-8"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w-full bg-clubDarker border-t border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row flex-wrap items-center justify-between gap-6 text-center md:text-left">
+            <a href="index.html" class="flex items-center gap-3 min-w-0">
+                <img src="img/logo.jpeg" alt="Logo" class="w-10 h-10 rounded-full border border-clubYellow object-cover shrink-0">
+                <div>
+                    <span class="text-lg font-black text-white">TONJ NORTH <span class="text-clubYellow">FC</span></span>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest">In Unity We Trust</p>
+                </div>
+            </a>
+            <p class="text-xs text-gray-500 leading-5 max-w-md">
+                &copy; 2026 Tonj North County Football Club. All Rights Reserved.
+            </p>
+            <div id="social" class="flex flex-wrap items-center justify-center gap-3 text-gray-400">
+                <a href="https://www.facebook.com/profile.php?id=61592543590430" class="w-10 h-10 rounded-full bg-clubDark border border-gray-800 flex items-center justify-center hover:text-clubYellow transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-clubDark border border-gray-800 flex items-center justify-center hover:text-clubYellow transition"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-clubDark border border-gray-800 flex items-center justify-center hover:text-clubYellow transition"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.SANITY_CONFIG = window.SANITY_CONFIG || {
+            projectId: 'jfpcp48w',
+            dataset: 'production',
+            apiVersion: '2024-01-01'
+        };
+    </script>
+    <script>
+        if (window.location.hash) {
+            history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+        window.addEventListener('load', () => {
+            window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+            document.getElementById('home')?.scrollIntoView({ block: 'start' });
+        });
+
+        const revealSections = document.querySelectorAll('.reveal-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        revealSections.forEach((section) => observer.observe(section));
+
+        window.addEventListener('scroll', () => {
+            const offset = window.scrollY * 0.08;
+            document.querySelectorAll('.parallax-layer').forEach((layer) => {
+                layer.style.transform = `translate3d(0, ${offset}px, 0)`;
+            });
+        }, { passive: true });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html>
